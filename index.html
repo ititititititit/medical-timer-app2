@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>地域医療業務記録</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>地域医療 業務記録</h1>
+    <form id="workForm">
+      <label for="category">業務項目:</label>
+      <select id="category">
+        <option value="外来診療">外来診療</option>
+        <option value="介護相談">介護相談</option>
+        <option value="訪問介護">訪問介護</option>
+        <option value="電子カルテ入力">電子カルテ入力</option>
+        <option value="書類確認">書類確認</option>
+        <option value="移動時間">移動時間</option>
+        <option value="会議参加">会議参加</option>
+      </select>
+
+      <label>所要時間:</label>
+      <div class="picker-row">
+        <div class="picker" id="hourPicker"></div>
+        <div class="picker" id="minutePicker"></div>
+      </div>
+
+      <button type="submit" class="record-button">記録する</button>
+    </form>
+
+    <div class="buttons">
+      <button type="button" onclick="renderDailyChart()">日別円グラフ</button>
+      <button type="button" onclick="renderWeeklyChart()">週別棒グラフ</button>
+      <button type="button" onclick="renderMonthlyChart()">月別棒グラフ</button>
+    </div>
+
+    <canvas id="chartCanvas"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
