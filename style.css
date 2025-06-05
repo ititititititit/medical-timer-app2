@@ -1,0 +1,118 @@
+body {
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  background-color: #fefefe;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: #fffef9;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e0dfd5;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  font-weight: bold;
+}
+
+select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.picker-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.picker {
+  width: 100px;
+  height: 100px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 18px;
+  scroll-snap-type: y mandatory;
+  text-align: center;
+}
+
+.picker::-webkit-scrollbar {
+  display: none;
+}
+
+.picker div {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: center;
+  color: #888;
+}
+
+.picker div.selected {
+  font-weight: bold;
+  font-size: 20px;
+  color: #000;
+}
+
+.record-button {
+  background: linear-gradient(to bottom, #ffebe7, #ffd9d0);
+  border: 1px solid #f5c3b8;
+  border-radius: 8px;
+  box-shadow: 0 4px #d6a8a1;
+  color: #5a2e2e;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 16px;
+  transition: all 0.1s ease-in-out;
+}
+
+.record-button:active {
+  box-shadow: 0 2px #d6a8a1;
+  transform: translateY(2px);
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.buttons button {
+  flex: 1;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+canvas {
+  margin-top: 30px;
+  width: 100%;
+  height: auto;
+}
